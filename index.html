@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Your description goes here">
+	<meta name="keywords" content="one, two, three">
+
+	<title>Robert F. Jr.</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- external CSS link -->
+	<link rel="stylesheet" href="css/reset.css">
+	<!-- This gets created the first time you compile the Sass file -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+	<!-- external JavaScript source with defer-->
+	<script src="js/main.js" defer></script>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div class="logoWrapper">
+				<h2 class="name"><a href="index.html">Robert</a></h2>
+			</div>
+			<ul class="hidden">
+				<li><a href="#intro">
+						<div>HOME</div>
+					</a></li>
+				<li><a href="#about">
+						<div>ABOUT</div>
+					</a></li>
+				<li><a href="#services">
+						<div>SERVICES</div>
+					</a></li>
+				<li><a href="#portfolio">
+						<div>PORTFOLIO</div>
+					</a></li>
+				<li><a href="#contact">
+						<div>CONTACT</div>
+					</a></li>
+			</ul>
+			<div class="menu">
+				<span class="material-icons" id="menuIcon">
+					menu
+				</span>
+			</div>
+		</nav>
+	</header>
+
+	<main id="intro">
+		<div class="intro container">
+			<div class="smallTitle">Hi there, I'm</div>
+			<h1>Robert Fabela</h1>
+			<h3>
+				<div id="dynamicText"></div> <span id="insertionPoint">|</span>
+			</h3>
+			<p>Please take a look around and let's see what we can build together.</p>
+			<a href="#contact" class="btn-link"><span>Contact Me</span></a>
+		</div>
+		<div class="image container">
+			<img src="media/FB_IMG_1646863204245.jpg" alt="This is me!">
+		</div>
+	</main>
+
+	<section class="about" id="about">
+		<h2 class="sectHeading"><span>ABOUT</span></h2>
+		<div class="me">
+			<h3>About Me</h3>
+			<h4>Hi, my name is Robert and I'm a Full-Stack Software Engineer</h4>
+			<p>
+				I'm a passionate developer who loves to solve complex problems with elegant and clean code.
+			</p>
+		</div>
+		<div class="tech">
+			<h3>Technologies</h3>
+			<ul>
+				<li><span>HTML</span></li>
+				<li><span>CSS</span></li>
+				<li><span>Sass</span></li>
+				<li><span>Bootstrap</span></li>
+				<li><span>Tailwind</span></li>
+				<li><span>Javascript</span></li>
+				<li><span>Python</span></li>
+				<li><span>Java</span></li>
+			</ul>
+		</div>
+	</section>
+
+	<section id="services">
+		<h2 class="sectHeading"><span>SERVICES</span></h2>
+		<ul>
+			<li>
+				<div class="card">
+					<div class="pentagon">
+						<span class="material-icons">
+							format_paint
+						</span>
+					</div>
+					<h4>Beautiful Styling</h4>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dicta numquam earum
+						placeat? Illum debitis ab ipsam cumque illo veritatis.</p>
+				</div>
+			</li>
+			<li>
+				<div class="card">
+					<div class="pentagon">
+						<span class="material-icons">
+							grid_view
+						</span>
+					</div>
+					<h4>Clean Layout</h4>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dicta numquam earum
+						placeat? Illum debitis ab ipsam cumque illo veritatis.</p>
+				</div>
+			</li>
+			<li>
+				<div class="card">
+					<div class="pentagon">
+						<span class="material-icons">
+							mobile_friendly
+						</span>
+					</div>
+					<h4>Responsive Design</h4>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dicta numquam earum
+						placeat? Illum debitis ab ipsam cumque illo veritatis.</p>
+				</div>
+			</li>
+			<li>
+				<div class="card">
+					<div class="pentagon">
+						<span class="material-icons">
+							code
+						</span>
+					</div>
+					<h4>Interactivity</h4>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dicta numquam earum
+						placeat? Illum debitis ab ipsam cumque illo veritatis.</p>
+				</div>
+			</li>
+			<li>
+				<div class="card">
+					<div class="pentagon">
+						<span class="material-icons">
+							bug_report
+						</span>
+					</div>
+					<h4>Bug Free</h4>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dicta numquam earum
+						placeat? Illum debitis ab ipsam cumque illo veritatis.</p>
+				</div>
+			</li>
+		</ul>
+	</section>
+
+	<section id="portfolio">
+		<h2 class="sectHeading"><span>MY PORTFOLIO</span></h2>
+		<div class="container">
+			<div class="myWork">
+				<img src="https://images.unsplash.com/photo-1600605624614-ddffe7dc6932?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3987&q=80"
+					alt="A forest">
+				<h3>Lorem Ipsum</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vero voluptatum saepe nesciunt
+					autem natus. Ab, beatae sit.</p>
+				<a href="#" class="btn-link">View</a>
+			</div>
+			<div class="myWork">
+				<img src="https://images.unsplash.com/photo-1604761773777-d478adb6a484?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
+					alt="A river">
+				<h3>Lorem Ipsum</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, inventore. Est mollitia
+					consequatur voluptatibus corporis!</p>
+				<a href="#" class="btn-link">View</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="contact">
+		<h2 class="sectHeading"><span>CONTACT ME</span></h2>
+		<p>I'm currently accepting new freelance clients and interesting job opportunities.</p>
+		<form action="">
+			<label for="name" class="hidden">Name</label>
+			<input type="text" name="name" id="name" placeholder="Name *" required>
+
+			<label for="mail" class="hidden">Email</label>
+			<input type="email" name="mail" id="mail" placeholder="Email *" required>
+
+			<label for="subject" class="hidden">Subject</label>
+			<input type="text" name="subject" id="subject" placeholder="Subject *" required>
+			<textarea name="comment" id="comment" placeholder="Your Message *" cols="30" rows="10" required></textarea>
+
+			<div class="buttonContainer">
+				<button type="submit" id="submit">Send Message</button>
+				<button type="reset" id="reset">Reset</button>
+			</div>
+		</form>
+	</section>
+
+	<footer>
+		<p>© Roberto Fabela 2022</p>
+	</footer>
+</body>
+
+</html>
