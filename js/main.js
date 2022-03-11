@@ -4,7 +4,8 @@ const [...navList] = document.querySelectorAll("nav li");
 let dynamicText = document.querySelector("#dynamicText");
 
 
-window.addEventListener("resize", changeMenuEvents)
+window.addEventListener("resize", changeMenuEvents);
+menu.addEventListener("click", toggleHidden);
 
 function changeMenuEvents() {
     if (!window.matchMedia("(min-width: 1000px)").matches) {
@@ -23,11 +24,6 @@ function toggleHidden() {
     menuList.classList.toggle("hidden");
     menuList.classList.toggle("show");
 }
-
-
-menu.addEventListener("click", toggleHidden);
-
-
 
 
 let word,
@@ -60,16 +56,12 @@ function writeChar() {
             interval = setInterval(deleteChar, 50);
         }, 1500)
     }
-
-
 }
 
 function start() {
     word = "Web Developer";
     reset = false;
     interval = setInterval(writeChar, 100);
-
-
 }
 
 changeMenuEvents()

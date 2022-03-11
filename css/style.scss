@@ -322,6 +322,8 @@ p{
 }
 #insertionPoint{
     animation: blink 1s steps(2, start) infinite;
+    font-size: 2.5rem;
+
 }
 @keyframes blink {
     to{
