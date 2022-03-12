@@ -1,20 +1,23 @@
 const menu = document.querySelector(".menu");
 const menuList = document.querySelector("nav>ul");
 const [...navList] = document.querySelectorAll("nav li");
+const [...everythingButNav] = document.querySelectorAll("body>*:not(header)");
+const blurAll = document.querySelector("#blurAll");
 let dynamicText = document.querySelector("#dynamicText");
 
 
 window.addEventListener("resize", changeMenuEvents);
 menu.addEventListener("click", toggleHidden);
+blurAll.addEventListener("click", removeShow)
 
 function changeMenuEvents() {
     if (!window.matchMedia("(min-width: 1000px)").matches) {
-        for (item of navList) {
+        for (let item of navList) {
             item.addEventListener("click", toggleHidden);
         }
     }
     else {
-        for (item of navList) {
+        for (let item of navList) {
             item.removeEventListener("click", toggleHidden)
         }
     }
@@ -23,8 +26,14 @@ function changeMenuEvents() {
 function toggleHidden() {
     menuList.classList.toggle("hidden");
     menuList.classList.toggle("show");
+    blurAll.classList.toggle("blur");
 }
 
+function removeShow(){
+    menuList.classList.add("hidden");
+    menuList.classList.remove("show");
+    blurAll.classList.remove("blur");
+}
 
 let word,
     reset,
