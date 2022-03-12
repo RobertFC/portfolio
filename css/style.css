@@ -132,6 +132,11 @@ a {
   transition: visibility 0s linear 0s, opacity 300ms;
 }
 
+.blur {
+  filter: blur(3px);
+  background: rgba(0, 0, 0, 0.15);
+}
+
 .btn-link {
   display: flex;
   justify-content: center;
