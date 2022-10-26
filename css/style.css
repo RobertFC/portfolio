@@ -529,24 +529,14 @@ p {
   justify-content: center;
 }
 
-@media screen and (min-width: 800px) {
-  #portfolio {
-    padding: 5% 3%;
-  }
+@media screen and (min-width: 1000px) {
   #portfolio .container {
     display: flex;
+    width: 800px;
+    margin: auto;
+    justify-content: center;
+    gap: 50px;
   }
-  #portfolio .myWork {
-    flex: 1;
-  }
-  #portfolio img {
-    height: 350px;
-    width: 300px;
-    object-fit: cover;
-    object-position: top;
-  }
-}
-@media screen and (min-width: 1000px) {
   #portfolio img {
     height: 350px;
     width: 300px;
@@ -558,6 +548,25 @@ p {
   }
   #portfolio p {
     font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #portfolio {
+    padding: 5% 3%;
+  }
+  #portfolio .container {
+    display: flex;
+    width: 1400px;
+    margin: auto;
+  }
+  #portfolio .myWork {
+    flex: 1;
+  }
+  #portfolio img {
+    height: 350px;
+    width: 300px;
+    object-fit: cover;
+    object-position: top;
   }
 }
 .myWork {
