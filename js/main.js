@@ -13,7 +13,9 @@ blurAll.addEventListener("click", removeShow)
 function changeMenuEvents() {
     if (!window.matchMedia("(min-width: 1000px)").matches) {
         for (let item of navList) {
-            item.addEventListener("click", toggleHidden);
+            if (item.id !== 'switchContainer') {
+                item.addEventListener("click", toggleHidden);
+            }
         }
     }
     else {
@@ -68,10 +70,14 @@ function writeChar() {
 }
 
 function start() {
-    word = "Web Developer";
+    word = "Full Stack";
     reset = false;
     interval = setInterval(writeChar, 100);
 }
 
 changeMenuEvents()
 start()
+
+window.addEventListener('resize', () => {
+   removeShow();
+});
