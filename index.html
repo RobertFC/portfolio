@@ -2,216 +2,340 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your description goes here">
-    <meta name="keywords" content="one, two, three">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your description goes here">
+  <meta name="keywords" content="one, two, three">
 
-    <title>Robert Fabela - Web Dev</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- external CSS link -->
-    <link rel="stylesheet" href="css/reset.css">
-    <!-- This gets created the first time you compile the Sass file -->
-    <link rel="stylesheet" href="css/style.css">
+  <title>Robert Fabela - Web Dev</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- external CSS link -->
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- This gets created the first time you compile the Sass file -->
+  <link rel="stylesheet" href="css/style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    #tsparticles {
+      position: absolute;
+      left: calc(50% - 100px);
+      top: calc(50% - 100px);
+      margin: 0;
+      padding: 0;
+      width: 200px;
+      height: 200px;
+      z-index: -1;
+    }
 
-    <!-- external JavaScript source with defer-->
-    <script src="js/main.js" defer></script>
+  </style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- external JavaScript source with defer-->
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logoWrapper">
-                <h2 class="name"><a href="index.html">Robert</a></h2>
-            </div>
-            <ul class="hidden">
-                <li><a href="#intro">
-                    <div>HOME</div>
-                </a></li>
-                <li><a href="#about">
-                    <div>ABOUT</div>
-                </a></li>
-                <li><a href="#services">
-                    <div>SERVICES</div>
-                </a></li>
-                <li><a href="#portfolio">
-                    <div>PORTFOLIO</div>
-                </a></li>
-                <li><a href="#contact">
-                    <div>CONTACT</div>
-                </a></li>
-            </ul>
-            <div class="menu">
+
+  <div id="tsparticles"></div>
+
+
+  <header>
+    <nav>
+      <div class="logoWrapper">
+        <h2 class="name"><a href="index.html">Robert</a></h2>
+      </div>
+      <ul class="hidden">
+        <li><a href="#intro">
+          <div>HOME</div>
+        </a></li>
+        <li><a href="#about">
+          <div>ABOUT</div>
+        </a></li>
+        <li><a href="#services">
+          <div>SERVICES</div>
+        </a></li>
+        <li><a href="#portfolio">
+          <div>PORTFOLIO</div>
+        </a></li>
+        <li><a href="#contact">
+          <div>CONTACT</div>
+        </a></li>
+        <li id="switchContainer">
+          <label class="switch">
+            <input type="checkbox" id="particlesSwitch" checked>
+            <span class="slider"></span>
+          </label>
+        </li>
+      </ul>
+      <div class="menu">
 				<span class="material-icons" id="menuIcon">
 					menu
 				</span>
-            </div>
-        </nav>
-        <div class="blur">
+      </div>
+    </nav>
+    <div class="blur">
 
-        </div>
-    </header>
+    </div>
+  </header>
 
-    <section id="blurAll">
-        <main id="intro">
-            <div class="intro container">
-                <div class="smallTitle">Hi there, I'm</div>
-                <h1>Robert Fabela</h1>
-                <h3>
-                    <div id="dynamicText"></div>
-                    <span id="insertionPoint">|</span>
-                </h3>
-                <p>Please take a look around and let's see what we can build together.</p>
-                <a href="#contact" class="btn-link"><span>Contact Me</span></a>
-            </div>
-            <div class="image container">
-                <img src="media/FB_IMG_1646863204245.jpg" alt="This is me!">
-            </div>
-        </main>
+  <section id="blurAll">
+    <main id="intro">
+      <div class="intro container">
+        <div class="smallTitle">Hi there, I'm</div>
+        <h1>Robert Fabela</h1>
+        <h3>
+          <div id="dynamicText"></div>
+          <span id="insertionPoint">|</span>
+        </h3>
+        <p>Please take a look around and let's see what we can build together.</p>
+        <a href="#contact" class="btn-link"><span>Contact Me</span></a>
+      </div>
+      <div class="image container">
+        <img id="myPhoto" src="media/FB_IMG_1646863204245.jpg" alt="This is me!">
+      </div>
+    </main>
 
-        <section class="about" id="about">
-            <h2 class="sectHeading"><span>ABOUT</span></h2>
-            <div class="me">
-                <h3>About Me</h3>
-                <h4>Hi, my name is Robert and I'm a Full-Stack Software Engineer</h4>
-                <p>
-                    I'm a passionate developer who loves to solve complex problems with elegant and clean code.
-                </p>
-            </div>
-            <div class="tech">
-                <h3>Technologies</h3>
-                <ul>
-                    <li><span>HTML</span></li>
-                    <li><span>CSS</span></li>
-                    <li><span>Sass</span></li>
-                    <li><span>Bootstrap</span></li>
-                    <li><span>Tailwind</span></li>
-                    <li><span>Javascript</span></li>
-                    <li><span>Python</span></li>
-                    <li><span>Java</span></li>
-                </ul>
-            </div>
-        </section>
+    <section class="about" id="about">
+      <h2 class="sectHeading"><span>ABOUT</span></h2>
+      <div class="me">
+        <h3>About Me</h3>
+        <h4>Hi, my name is Robert and I'm a Full-Stack Software Engineer</h4>
+        <p>
+          I'm a passionate developer who loves to solve complex problems with elegant, detailed and clean code.
+        </p>
+      </div>
+    </section>
 
-        <section id="services">
-            <h2 class="sectHeading"><span>SERVICES</span></h2>
-            <ul>
-                <li>
-                    <div class="card">
-                        <div class="pentagon">
+    <section id="services">
+      <h2 class="sectHeading"><span>Skills</span></h2>
+      <ul class="skillsContainer">
+        <li>
+          <div class="card">
+            <div class="pentagon">
     						<span class="material-icons">
     							format_paint
     						</span>
-                        </div>
-                        <h4>Beautiful Styling</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dicta numquam earum
-                            placeat? Illum debitis ab ipsam cumque illo veritatis.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="card">
-                        <div class="pentagon">
-    						<span class="material-icons">
-    							grid_view
-    						</span>
-                        </div>
-                        <h4>Clean Layout</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dicta numquam earum
-                            placeat? Illum debitis ab ipsam cumque illo veritatis.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="card">
-                        <div class="pentagon">
-    						<span class="material-icons">
-    							mobile_friendly
-    						</span>
-                        </div>
-                        <h4>Responsive Design</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dicta numquam earum
-                            placeat? Illum debitis ab ipsam cumque illo veritatis.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="card">
-                        <div class="pentagon">
+            </div>
+            <h4>Front End</h4>
+            <ul class="techContainer">
+              <li class="tech">Javascript</li>
+              <li class="tech">React</li>
+              <li class="tech">React Native</li>
+              <li class="tech">HTML5</li>
+              <li class="tech">AWS Amplify</li>
+              <li class="tech">Sass</li>
+              <li class="tech">Bootstrap</li>
+              <li class="tech">Tailwind</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="pentagon">
     						<span class="material-icons">
     							code
     						</span>
-                        </div>
-                        <h4>Interactivity</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dicta numquam earum
-                            placeat? Illum debitis ab ipsam cumque illo veritatis.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="card">
-                        <div class="pentagon">
-    						<span class="material-icons">
-    							bug_report
-    						</span>
-                        </div>
-                        <h4>Bug Free</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dicta numquam earum
-                            placeat? Illum debitis ab ipsam cumque illo veritatis.</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <section id="portfolio">
-            <h2 class="sectHeading"><span>MY PORTFOLIO</span></h2>
-            <div class="container">
-                <div class="myWork">
-                    <img src="https://images.unsplash.com/photo-1600605624614-ddffe7dc6932?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3987&q=80"
-                         alt="A forest">
-                    <h3>Lorem Ipsum</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vero voluptatum saepe nesciunt
-                        autem natus. Ab, beatae sit.</p>
-                    <a href="#" class="btn-link">View</a>
-                </div>
-                <div class="myWork">
-                    <img src="https://images.unsplash.com/photo-1604761773777-d478adb6a484?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
-                         alt="A river">
-                    <h3>Lorem Ipsum</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, inventore. Est mollitia
-                        consequatur voluptatibus corporis!</p>
-                    <a href="#" class="btn-link">View</a>
-                </div>
             </div>
-        </section>
-
-        <section id="contact">
-            <h2 class="sectHeading"><span>CONTACT ME</span></h2>
-            <p>I'm currently accepting new freelance clients and interesting job opportunities.</p>
-            <form name="contact" method="POST" data-netlify="true">
-                <label for="name" class="hidden">Name</label>
-                <input type="text" name="name" id="name" placeholder="Name *" required>
-
-                <label for="mail" class="hidden">Email</label>
-                <input type="email" name="mail" id="mail" placeholder="Email *" required>
-
-                <label for="subject" class="hidden">Subject</label>
-                <input type="text" name="subject" id="subject" placeholder="Subject *" required>
-                <textarea name="comment" id="comment" placeholder="Your Message *" cols="30" rows="10"
-                          required></textarea>
-
-                <div class="buttonContainer">
-                    <button type="submit" id="submit">Send Message</button>
-                    <button type="reset" id="reset">Reset</button>
-                </div>
-            </form>
-        </section>
-
-        <footer>
-            <p>© Roberto Fabela 2022</p>
-        </footer>
+            <h4>Back End</h4>
+            <ul class="techContainer">
+              <li class="tech">Node.js</li>
+              <li class="tech">Express.js</li>
+              <li class="tech">MongoDB</li>
+              <li class="tech">AWS Lambda</li>
+              <li class="tech">AWS API Gateway</li>
+              <li class="tech">AWS DynamoDB</li>
+              <li class="tech">AWS Cognito</li>
+              <li class="tech">GCP</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="pentagon">
+    						<span class="material-icons">
+    							grid_view
+    						</span>
+            </div>
+            <h4>Other Technologies</h4>
+            <ul class="techContainer">
+              <li class="tech">Typescript</li>
+              <li class="tech">Java</li>
+              <li class="tech">C#</li>
+              <li class="tech">Python</li>
+              <li class="tech">Git</li>
+              <li class="tech">Jest</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
     </section>
+
+    <section id="portfolio">
+      <h2 class="sectHeading"><span>MY PORTFOLIO</span></h2>
+      <div class="container">
+        <div class="myWork">
+          <a href="https://main.d3ukitlsqjfpu5.amplifyapp.com/"
+             target="_blank"
+             rel="noreferrer noopener"
+             class="imageLinkWrapper">
+            <img
+              class="project"
+              src="./media/fundTheReach.png"
+              alt="Fund The Reach Web App">
+          </a>
+          <h3>Fund The Reach</h3>
+          <p>
+            Fund The Reach is a web application dedicated to help people
+            in need specially in developing countries.
+          </p>
+          <a href="https://main.d3ukitlsqjfpu5.amplifyapp.com/" class="btn-link">View</a>
+        </div>
+        <div class="myWork">
+          <a href="https://feedback-board-app.herokuapp.com/"
+             target="_blank"
+             rel="noreferrer noopener"
+             class="imageLinkWrapper">
+            <img
+              class="project"
+              src="./media/feedbackBoard.png"
+              alt="Feedback Board app">
+          </a>
+          <h3>Feedback Board</h3>
+          <p>
+            A web application for startups to serve as
+            the main forum to discuss new, great and exciting ideas.
+          </p>
+          <a href="https://feedback-board-app.herokuapp.com/" target="_blank" rel="noreferrer noopener" class="btn-link">View</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="sectHeading"><span>CONTACT ME</span></h2>
+      <p>I'm currently accepting new freelance clients and interesting job opportunities.</p>
+      <form name="contact" method="POST" data-netlify="true">
+        <label for="name" class="hidden">Name</label>
+        <input type="text" name="name" id="name" placeholder="Name *" required>
+
+        <label for="mail" class="hidden">Email</label>
+        <input type="email" name="mail" id="mail" placeholder="Email *" required>
+
+        <label for="subject" class="hidden">Subject</label>
+        <input type="text" name="subject" id="subject" placeholder="Subject *" required>
+        <textarea name="comment" id="comment" placeholder="Your Message *" cols="30" rows="10"
+                  required></textarea>
+
+        <div class="buttonContainer">
+          <button type="submit" id="submit">Send Message</button>
+          <button type="reset" id="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <p>© Roberto Fabela 2021-2022</p>
+    </footer>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.3.4/tsparticles.bundle.min.js"></script>
+  <script type="text/javascript">
+
+    const options = {
+      fpsLimit: 120,
+      interactivity: {
+        detectsOn: "window",
+        events: {
+          onClick: {
+            enable: true,
+            mode: 'push'
+          },
+          onHover: {
+            enable: true,
+            mode: 'repulse',
+          }
+        },
+        modes: {
+          push: {
+            quantity: 5
+          },
+          repulse: {
+            distance: 100
+          }
+        }
+      },
+      particles: {
+        number: {
+          value: 0,
+        },
+        color: {
+          value: "random",
+        },
+        shape: {
+          type: "circle",
+        },
+        opacity: {
+          value: 0.2,
+        },
+        size: {
+          value: { min: 5, max: 10 },
+        },
+        move: {
+          angle: {
+            offset: 0,
+            value: 30,
+          },
+          enable: true,
+          speed: { min: 5, max: 10 },
+          direction: 'top',
+          random: false,
+          straight: false,
+          outModes: {
+            default: 'destroy',
+          },
+        },
+      },
+      background: {
+        color: 'transparent',
+      },
+      emitters: [
+        {
+          direction: 'top',
+          position: {
+            y: 100,
+          },
+          life: {
+            duration: 3,
+            delay: 4,
+            count: 0,
+          },
+        },
+      ],
+    };
+
+    tsParticles.load('tsparticles', options);
+
+    const particles = tsParticles.domItem(0);
+
+    const slider = document.getElementById('particlesSwitch');
+    let particlesEnabled = true;
+
+    slider.addEventListener('input', () => {
+      particlesEnabled = !particlesEnabled;
+
+      particles.actualOptions.interactivity.events.onClick.enable = particlesEnabled;
+
+      if (particlesEnabled) {
+        particles.play();
+      }
+      else {
+        particles.canvas.clear();
+        particles.pause();
+      }
+    });
+  </script>
 </body>
 
 </html>
