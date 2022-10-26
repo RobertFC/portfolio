@@ -481,7 +481,11 @@ p {
     flex-wrap: wrap;
   }
   #services li {
+    display: grid;
     flex-basis: 30%;
+  }
+  #services .card {
+    justify-self: center;
   }
   #services h4 {
     font-size: 1.4rem;
@@ -557,7 +561,7 @@ p {
   }
   #portfolio .container {
     display: flex;
-    width: 1400px;
+    width: 1300px;
     margin: auto;
   }
   #portfolio .myWork {

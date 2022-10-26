@@ -558,12 +558,17 @@ p {
     .skillsContainer {
       flex-direction: row;
       flex-wrap: wrap;
+
     }
 
     li {
+      display: grid;
       flex-basis: 30%;
     }
 
+    .card {
+      justify-self: center;
+    }
     h4 {
       font-size: 1.4rem;
     }
@@ -655,7 +660,7 @@ p {
 
     .container {
       display: flex;
-      width: 1400px;
+      width: 1300px;
       margin: auto;
     }
 
