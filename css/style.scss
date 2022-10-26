@@ -61,6 +61,12 @@ main, section {
   color: $main-txt-color;
 }
 
+@media (min-width: 1000px) {
+  nav ul {
+    gap: 50px;
+  }
+}
+
 #about,
 #services,
 #portfolio,
