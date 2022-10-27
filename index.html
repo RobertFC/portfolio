@@ -137,14 +137,13 @@
     						</span>
             </div>
             <h4>Back End</h4>
-            <ul class="techContainer">
+            <ul id="backendTech" class="techContainer">
               <li class="tech">Node.js</li>
               <li class="tech">Express.js</li>
               <li class="tech">MongoDB</li>
               <li class="tech">AWS Lambda</li>
               <li class="tech">AWS API Gateway</li>
               <li class="tech">AWS DynamoDB</li>
-              <li class="tech">AWS Cognito</li>
               <li class="tech">GCP</li>
             </ul>
           </div>
@@ -240,6 +239,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.3.4/tsparticles.bundle.min.js"></script>
   <script type="text/javascript">
     const options = {
+      detectRetina: true,
       fpsLimit: 120,
       interactivity: {
         detectsOn: "window",
@@ -247,10 +247,6 @@
           onClick: {
             enable: true,
             mode: 'push'
-          },
-          onHover: {
-            enable: true,
-            mode: 'repulse'
           },
           onDiv: {
             selectors: ['#myPhoto'],
@@ -261,9 +257,6 @@
         modes: {
           push: {
             quantity: 5
-          },
-          repulse: {
-            distance: 50,
           },
           attract: {
             distance: 100,
@@ -293,7 +286,7 @@
             value: 30,
           },
           enable: true,
-          speed: { min: 7, max: 15 },
+          speed: { min: 5, max: 12 },
           direction: 'top',
           random: false,
           straight: false,
@@ -313,7 +306,7 @@
           },
           life: {
             duration: 3,
-            delay: 0.5,
+            delay: 2,
             count: 0,
           },
         },
@@ -343,6 +336,7 @@
 
     const canvas = document.querySelector('#tsparticles canvas');
     canvas.style.position = 'absolute';
+    canvas.style.height = '33%';
   </script>
 </body>
 
