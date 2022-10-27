@@ -503,7 +503,7 @@ p {
     background-color: white;
     border-radius: 15px;
     height: 500px;
-    width: 250px;
+    width: 300px;
   }
 
   .pentagon {
@@ -551,6 +551,12 @@ p {
   }
 
 
+}
+
+#backendTech li:last-child {
+  grid-column: 1 / 3;
+  width: 50%;
+  justify-self: center;
 }
 
 @media screen and (min-width: 900px) {
