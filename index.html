@@ -240,7 +240,7 @@
   <script type="text/javascript">
     const options = {
       detectRetina: true,
-      fpsLimit: 60,
+      fpsLimit: 120,
       interactivity: {
         detectsOn: "window",
         events: {
@@ -248,20 +248,17 @@
             enable: true,
             mode: 'push'
           },
-          onDiv: {
-            selectors: ['#myPhoto'],
+          onHover: {
             enable: true,
-            mode: 'bounce',
-            type: 'square'
+            mode: 'repulse',
           }
         },
         modes: {
           push: {
             quantity: 5
           },
-          attract: {
-            distance: 100,
-            factor: 4
+          repulse: {
+            distance: 100
           }
         }
       },
@@ -276,7 +273,7 @@
           type: "circle",
         },
         opacity: {
-          value: 0.2,
+          value: 0.3,
         },
         size: {
           value: { min: 5, max: 10 },
@@ -336,8 +333,6 @@
     });
 
     const canvas = document.querySelector('#tsparticles canvas');
-    canvas.style.position = 'absolute';
-    canvas.style.height = '40%';
   </script>
 </body>
 
