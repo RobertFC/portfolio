@@ -19,14 +19,10 @@
 
   <style>
     #tsparticles {
-      position: absolute;
-      left: calc(50% - 100px);
-      top: calc(50% - 100px);
-      margin: 0;
-      padding: 0;
-      width: 200px;
-      height: 200px;
-      z-index: -1;
+    }
+
+    body {
+      position: relative;
     }
 
   </style>
@@ -42,7 +38,6 @@
 <body>
 
   <div id="tsparticles"></div>
-
 
   <header>
     <nav>
@@ -244,7 +239,6 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.3.4/tsparticles.bundle.min.js"></script>
   <script type="text/javascript">
-
     const options = {
       fpsLimit: 120,
       interactivity: {
@@ -256,7 +250,12 @@
           },
           onHover: {
             enable: true,
-            mode: 'repulse',
+            mode: 'repulse'
+          },
+          onDiv: {
+            selectors: ['#myPhoto'],
+            enable: true,
+            mode: 'bounce',
           }
         },
         modes: {
@@ -264,7 +263,11 @@
             quantity: 5
           },
           repulse: {
-            distance: 100
+            distance: 50,
+          },
+          attract: {
+            distance: 100,
+            factor: 4
           }
         }
       },
@@ -290,7 +293,7 @@
             value: 30,
           },
           enable: true,
-          speed: { min: 5, max: 10 },
+          speed: { min: 7, max: 15 },
           direction: 'top',
           random: false,
           straight: false,
@@ -310,7 +313,7 @@
           },
           life: {
             duration: 3,
-            delay: 4,
+            delay: 0.5,
             count: 0,
           },
         },
@@ -337,6 +340,9 @@
         particles.pause();
       }
     });
+
+    const canvas = document.querySelector('#tsparticles canvas');
+    canvas.style.position = 'absolute';
   </script>
 </body>
 
