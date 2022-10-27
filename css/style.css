@@ -223,10 +223,6 @@ nav li > a {
   font-size: 3rem;
 }
 
-#myPhoto {
-  z-index: -10;
-}
-
 @media screen and (min-width: 1000px) {
   nav {
     justify-content: space-between;
@@ -330,11 +326,10 @@ p {
 }
 
 .image img {
-  border-radius: 50%;
   border: 8px solid #ff5722;
-  object-fit: contain;
-  width: 80%;
-  margin-top: 30px;
+  margin-top: 20px;
+  width: 70%;
+  z-index: 10;
 }
 
 @media screen and (min-width: 500px) {
@@ -342,17 +337,12 @@ p {
     width: 60%;
   }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
   .image img {
     width: 50%;
     display: block;
     height: auto;
     margin: auto;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .image img {
-    width: 70%;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -620,6 +610,7 @@ p {
   appearance: none;
   margin: 20px 0;
   resize: both;
+  padding: 10px;
 }
 #contact textarea::placeholder {
   font-family: "Roboto", sans-serif;
@@ -648,6 +639,11 @@ p {
   color: #ff5722;
   height: 30px;
   width: 100px;
+  cursor: pointer;
+}
+
+#reset:hover {
+  background-color: whitesmoke;
 }
 
 #submit {
@@ -659,6 +655,11 @@ p {
   width: 130px;
   font-weight: bold;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: #ff8a65;
 }
 
 @media screen and (min-width: 1000px) {

@@ -252,10 +252,6 @@ nav {
   font-size: 3rem;
 }
 
-#myPhoto {
-  z-index: -10;
-}
-
 @media screen and (min-width: 1000px) {
   nav {
     justify-content: space-between;
@@ -374,33 +370,24 @@ p {
   justify-content: center;
 
 }
-
 .image img {
-  border-radius: 50%;
   border: 8px solid $main-color;
-  object-fit: contain;
-  width: 80%;
-  margin-top: 30px;
+  margin-top: 20px;
+  width: 70%;
+  z-index: 10;
 }
-
 @media screen and (min-width: 500px) {
   .image img {
     width: 60%;
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
   .image img {
     width: 50%;
     display: block;
     height: auto;
     margin: auto;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .image img {
-    width: 70%;
   }
 }
 
@@ -728,7 +715,7 @@ p {
     appearance: none;
     margin: 20px 0;
     resize: both;
-
+    padding: 10px;
   }
 
   textarea::placeholder {
@@ -766,6 +753,11 @@ p {
   color: $main-color;
   height: 30px;
   width: 100px;
+  cursor: pointer;
+}
+
+#reset:hover{
+  background-color: whitesmoke;
 }
 
 #submit {
@@ -777,6 +769,11 @@ p {
   width: 130px;
   font-weight: bold;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: $main-light;
 }
 
 @media screen and (min-width: 1000px) {
