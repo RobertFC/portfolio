@@ -401,6 +401,7 @@ p {
 #services {
   position: relative;
   background-color: #F2F6F7;
+  z-index: -10;
 }
 #services h2 {
   padding-bottom: 40px;
@@ -492,19 +493,25 @@ p {
   }
 }
 #portfolio {
+  display: grid;
   padding: 5% 0;
 }
+#portfolio h3 {
+  text-align: center;
+}
 #portfolio img {
-  margin-top: 50px;
   border-radius: 10px;
   border: 3px solid #212121;
   transition: transform 0.2s;
-  width: 250px;
-  height: 300px;
+  object-fit: cover;
+  object-position: top;
+  height: 350px;
+  width: 300px;
 }
 #portfolio .container {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  gap: 50px;
 }
 #portfolio .myWork {
   padding: 1% 1%;
@@ -526,23 +533,21 @@ p {
 }
 
 .imageLinkWrapper {
-  display: flex;
   justify-content: center;
 }
 
 @media screen and (min-width: 1000px) {
   #portfolio .container {
-    display: flex;
-    width: 800px;
-    margin: auto;
-    justify-content: center;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: 400px 400px;
+    margin: 10px auto;
   }
   #portfolio img {
     height: 350px;
     width: 300px;
-    object-fit: cover;
-    object-position: top;
+  }
+  #portfolio .myWork:last-child {
+    grid-column: 1/3;
   }
   #portfolio h3 {
     font-size: 2rem;

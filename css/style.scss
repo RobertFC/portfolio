@@ -370,12 +370,14 @@ p {
   justify-content: center;
 
 }
+
 .image img {
   border: 8px solid $main-color;
   margin-top: 20px;
   width: 70%;
   z-index: -10;
 }
+
 @media screen and (min-width: 500px) {
   .image img {
     width: 60%;
@@ -463,9 +465,11 @@ p {
 #services {
   position: relative;
   background-color: $global-bkg;
+  z-index: -10;
 
   h2 {
     padding-bottom: 40px;
+
   }
 
   h4 {
@@ -562,6 +566,7 @@ p {
     .card {
       justify-self: center;
     }
+
     h4 {
       font-size: 1.4rem;
     }
@@ -575,20 +580,27 @@ p {
 }
 
 #portfolio {
-
+  display: grid;
   padding: 5% 0;
+
+  h3 {
+    text-align: center;
+  }
+
   img {
-    margin-top: 50px;
     border-radius: 10px;
     border: 3px solid $title-color;
     transition: transform .2s;
-    width: 250px;
-    height: 300px;
+    object-fit: cover;
+    object-position: top;
+    height: 350px;
+    width: 300px;
   }
 
   .container {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 50px;
   }
 
   .myWork {
@@ -616,25 +628,24 @@ p {
 }
 
 .imageLinkWrapper {
-  display: flex;
   justify-content: center;
 }
 
 @media screen and (min-width: 1000px) {
   #portfolio {
     .container {
-      display: flex;
-      width: 800px;
-      margin: auto;
-      justify-content: center;
-      gap: 50px;
+      display: grid;
+      grid-template-columns: 400px 400px;
+      margin: 10px auto;
     }
 
     img {
       height: 350px;
       width: 300px;
-      object-fit: cover;
-      object-position: top;
+    }
+
+    .myWork:last-child {
+      grid-column: 1 / 3;
     }
 
     h3 {
@@ -660,6 +671,7 @@ p {
     .myWork {
       flex: 1;
     }
+
     img {
       height: 350px;
       width: 300px;
@@ -756,7 +768,7 @@ p {
   cursor: pointer;
 }
 
-#reset:hover{
+#reset:hover {
   background-color: whitesmoke;
 }
 
