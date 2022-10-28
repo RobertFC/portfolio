@@ -187,7 +187,8 @@
             Fund The Reach is a web application dedicated to help people
             in need specially in developing countries.
           </p>
-          <a href="https://main.d3ukitlsqjfpu5.amplifyapp.com/" target="_blank" rel="noreferrer noopener" class="btn-link">View</a>
+          <a href="https://main.d3ukitlsqjfpu5.amplifyapp.com/" target="_blank" rel="noreferrer noopener"
+             class="btn-link">View</a>
         </div>
         <div class="myWork">
           <a href="https://feedback-board-app.herokuapp.com/"
@@ -204,136 +205,153 @@
             A web application for startups to serve as
             the main forum to discuss new, great and exciting ideas.
           </p>
-          <a href="https://feedback-board-app.herokuapp.com/" target="_blank" rel="noreferrer noopener" class="btn-link">View</a>
+          <a href="https://feedback-board-app.herokuapp.com/" target="_blank" rel="noreferrer noopener"
+             class="btn-link">View</a>
+        </div>
+
+        <div class="myWork">
+          <a href="https://hearthstonememo.netlify.app/"
+             target="_blank"
+             rel="noreferrer noopener"
+             class="imageLinkWrapper">
+            <img class="project"
+                 src="./media/hsmemo.png"
+                 alt="hearthstone memory game">
+          </a>
+          <h3>Hearthstone Matching Cards</h3>
+          <p>
+            With over 100 different cards test your memory in one of the most popular trading card games: Hearthstone.
+          </p>
+          <a href="https://hearthstonememo.netlify.app/" target="_blank" rel="noreferrer noopener"
+             class="btn-link">View</a>
         </div>
       </div>
     </section>
 
-    <section id="contact">
-      <h2 class="sectHeading"><span>CONTACT ME</span></h2>
-      <p>I'm currently accepting new freelance clients and interesting job opportunities.</p>
-      <form name="contact" method="POST" data-netlify="true">
-        <label for="name" class="hidden">Name</label>
-        <input type="text" name="name" id="name" placeholder="Name *" required>
+      <section id="contact">
+        <h2 class="sectHeading"><span>CONTACT ME</span></h2>
+        <p>I'm currently accepting new freelance clients and interesting job opportunities.</p>
+        <form name="contact" method="POST" data-netlify="true">
+          <label for="name" class="hidden">Name</label>
+          <input type="text" name="name" id="name" placeholder="Name *" required>
 
-        <label for="mail" class="hidden">Email</label>
-        <input type="email" name="mail" id="mail" placeholder="Email *" required>
+          <label for="mail" class="hidden">Email</label>
+          <input type="email" name="mail" id="mail" placeholder="Email *" required>
 
-        <label for="subject" class="hidden">Subject</label>
-        <input type="text" name="subject" id="subject" placeholder="Subject *" required>
-        <textarea name="comment" id="comment" placeholder="Your Message *" cols="30" rows="10"
-                  required></textarea>
+          <label for="subject" class="hidden">Subject</label>
+          <input type="text" name="subject" id="subject" placeholder="Subject *" required>
+          <textarea name="comment" id="comment" placeholder="Your Message *" cols="30" rows="10"
+                    required></textarea>
 
-        <div class="buttonContainer">
-          <button type="submit" id="submit">Send Message</button>
-          <button type="reset" id="reset">Reset</button>
-        </div>
-      </form>
+          <div class="buttonContainer">
+            <button type="submit" id="submit">Send Message</button>
+            <button type="reset" id="reset">Reset</button>
+          </div>
+        </form>
+      </section>
+
+      <footer>
+        <p>© Roberto Fabela 2021-2022</p>
+      </footer>
     </section>
 
-    <footer>
-      <p>© Roberto Fabela 2021-2022</p>
-    </footer>
-  </section>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.3.4/tsparticles.bundle.min.js"></script>
-  <script type="text/javascript">
-    const options = {
-      detectRetina: true,
-      fpsLimit: 120,
-      interactivity: {
-        detectsOn: "window",
-        events: {
-          onClick: {
-            enable: true,
-            mode: 'push'
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.3.4/tsparticles.bundle.min.js"></script>
+    <script type="text/javascript">
+      const options = {
+        detectRetina: true,
+        fpsLimit: 120,
+        interactivity: {
+          detectsOn: "window",
+          events: {
+            onClick: {
+              enable: true,
+              mode: 'push'
+            },
+            onHover: {
+              enable: true,
+              mode: 'repulse',
+            }
           },
-          onHover: {
-            enable: true,
-            mode: 'repulse',
+          modes: {
+            push: {
+              quantity: 5
+            },
+            repulse: {
+              distance: 100
+            }
           }
         },
-        modes: {
-          push: {
-            quantity: 5
+        particles: {
+          number: {
+            value: 0,
           },
-          repulse: {
-            distance: 100
-          }
+          color: {
+            value: "random",
+          },
+          shape: {
+            type: "circle",
+          },
+          opacity: {
+            value: 0.3,
+          },
+          size: {
+            value: { min: 5, max: 10 },
+          },
+          move: {
+            angle: {
+              offset: 0,
+              value: 30,
+            },
+            enable: true,
+            speed: { min: 5, max: 12 },
+            direction: 'top',
+            random: false,
+            straight: false,
+            outModes: {
+              default: 'destroy',
+            },
+          },
+        },
+        background: {
+          color: 'transparent',
+        },
+        emitters: [
+          {
+            direction: 'top',
+            position: {
+              y: 100,
+            },
+            life: {
+              duration: 3,
+              delay: 3,
+              count: 0,
+            },
+          },
+        ],
+      };
+
+      tsParticles.load('tsparticles', options);
+
+      const particles = tsParticles.domItem(0);
+
+      const slider = document.getElementById('particlesSwitch');
+      let particlesEnabled = true;
+
+      slider.addEventListener('input', () => {
+        particlesEnabled = !particlesEnabled;
+
+        particles.actualOptions.interactivity.events.onClick.enable = particlesEnabled;
+
+        if (particlesEnabled) {
+          particles.play();
+        } else {
+          particles.canvas.clear();
+          particles.pause();
         }
-      },
-      particles: {
-        number: {
-          value: 0,
-        },
-        color: {
-          value: "random",
-        },
-        shape: {
-          type: "circle",
-        },
-        opacity: {
-          value: 0.3,
-        },
-        size: {
-          value: { min: 5, max: 10 },
-        },
-        move: {
-          angle: {
-            offset: 0,
-            value: 30,
-          },
-          enable: true,
-          speed: { min: 5, max: 12 },
-          direction: 'top',
-          random: false,
-          straight: false,
-          outModes: {
-            default: 'destroy',
-          },
-        },
-      },
-      background: {
-        color: 'transparent',
-      },
-      emitters: [
-        {
-          direction: 'top',
-          position: {
-            y: 100,
-          },
-          life: {
-            duration: 3,
-            delay: 2,
-            count: 0,
-          },
-        },
-      ],
-    };
+      });
 
-    tsParticles.load('tsparticles', options);
-
-    const particles = tsParticles.domItem(0);
-
-    const slider = document.getElementById('particlesSwitch');
-    let particlesEnabled = true;
-
-    slider.addEventListener('input', () => {
-      particlesEnabled = !particlesEnabled;
-
-      particles.actualOptions.interactivity.events.onClick.enable = particlesEnabled;
-
-      if (particlesEnabled) {
-        particles.play();
-      }
-      else {
-        particles.canvas.clear();
-        particles.pause();
-      }
-    });
-
-    const canvas = document.querySelector('#tsparticles canvas');
-  </script>
+      const canvas = document.querySelector('#tsparticles canvas');
+    </script>
 </body>
 
 </html>
