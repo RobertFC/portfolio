@@ -77,19 +77,51 @@ main, section {
   padding: 10px 50px 50px;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-}
-#blurAll {
+
+.sectionContainer, #intro {
   width: 1500px;
-  padding: 0 20px;
 }
 
-@media screen and (max-width: 400px) {
-  #blurAll {
-    padding: 0;
+@media screen and (max-width: 1550px) {
+  .sectionContainer, #intro {
+    width: 1000px;
   }
+}
+
+@media screen and (max-width: 1050px) {
+  .sectionContainer, #intro {
+    width: 800px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sectionContainer, #intro {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .sectionContainer, #intro {
+    width: 400px;
+  }
+}
+
+.altBg {
+  background-color: $global-bkg;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: -100;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    flex: 1;
+  }
+
 }
 
 @media screen and (min-width: 600px) {
@@ -106,7 +138,6 @@ body {
   #services,
   #portfolio,
   #contact, main#intro {
-    width: 100%;
     margin: 40px 0;
   }
 }
@@ -172,6 +203,15 @@ a {
 
 }
 
+#blurAll {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  z-index: 10;
+}
+
 .blur {
   filter: blur(3px);
   background: rgb(0 0 0 / 15%);
@@ -198,16 +238,14 @@ a {
   background-color: $main-dark;
 }
 
-/******************************************
-/* MODULE & STATES
-/*******************************************/
+
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: white;
-  z-index: 1;
+  z-index: 20;
 }
 
 nav {
@@ -424,14 +462,6 @@ p {
 }
 
 #about {
-  h3,
-  h4,
-  p,
-  ul {
-    padding-left: 15px;
-    padding-right: 15px;
-
-  }
 
   h3 {
     font-size: 2rem;
@@ -473,13 +503,13 @@ p {
     }
   }
   .me {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 50px;
   }
 }
 
 #services {
-  background-color: $global-bkg;
-  z-index: -10;
 
   h2 {
     padding-bottom: 40px;
@@ -537,7 +567,7 @@ p {
   }
 
   .tech {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -592,7 +622,7 @@ p {
 
 #portfolio {
   display: grid;
-  padding: 5% 0;
+  padding: 20px;
 
   h3 {
     text-align: center;
@@ -615,7 +645,9 @@ p {
   }
 
   .myWork {
-    padding: 1% 1%;
+    padding: 10px 10px;
+    justify-content: center;
+    align-items: center;
   }
 
   img:hover {
@@ -642,18 +674,15 @@ p {
   justify-content: center;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 1550px) {
   #portfolio {
-    .container {
+    .workContainer {
       display: grid;
       grid-template-columns: 400px 400px;
       margin: 10px auto;
     }
 
-    img {
-      height: 350px;
-      width: 300px;
-    }
+
 
     h3 {
       font-size: 2rem;
@@ -665,15 +694,13 @@ p {
   }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (max-width: 1050px) {
   #portfolio {
-    padding: 20px 20px;
-
-    .container {
-      display: flex;
-      width: 1300px;
-      margin: auto;
-      flex-wrap: wrap;
+    .workContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      margin: 10px auto;
     }
 
     .myWork {
@@ -681,13 +708,25 @@ p {
     }
 
     img {
-      height: 350px;
-      width: 300px;
-      object-fit: cover;
-      object-position: top;
+      height: 250px;
+      width: 200px;
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  #portfolio {
+    .workContainer {
+      grid-template-columns: 1fr;
+    }
+    img {
+      height: 300px;
+      width: 250px;
+    }
+  }
+}
+
+
 
 .myWork {
   display: flex;
