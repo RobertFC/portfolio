@@ -544,9 +544,9 @@ p {
   height: 350px;
   width: 300px;
 }
-#portfolio .container {
+#portfolio .workContainer {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 50px;
 }
 #portfolio .myWork {
