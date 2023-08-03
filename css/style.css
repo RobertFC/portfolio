@@ -1,24 +1,5 @@
-/******************************************
-/* SASS VARIABLES
-/*******************************************/
-/******************************************
-/* BASE STYLES
-/*******************************************/
 * {
   box-sizing: border-box;
-}
-
-.clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-
-.clear {
-  clear: both;
 }
 
 html {
@@ -27,16 +8,6 @@ html {
   user-select: none;
 }
 
-@media screen and (min-width: 600px) {
-  html {
-    font-size: 12px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  html {
-    font-size: 14px;
-  }
-}
 body *:focus {
   border-color: #ff5722;
 }
@@ -85,10 +56,11 @@ main, section {
   }
 }
 .altBg {
-  background-color: #F2F6F7;
-  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: #F2F6F7;
+  width: 100%;
   z-index: -100;
 }
 
@@ -177,8 +149,9 @@ a {
 
 #blurAll {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   align-items: center;
   width: 100vw;
   z-index: 10;
@@ -202,11 +175,11 @@ a {
 }
 
 .btn-link:hover {
-  background-color: #ff8a65;
+  background-color: #ff7e55;
 }
 
 .btn-link:active {
-  background-color: #bf360c;
+  background-color: #ee3900;
 }
 
 header {
@@ -228,6 +201,7 @@ nav {
 }
 nav .logoWrapper {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 nav h2 {
@@ -448,9 +422,9 @@ p {
 }
 #services .skillsContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   gap: 50px;
 }
 #services .card {
@@ -485,10 +459,10 @@ p {
   justify-content: center;
 }
 #services .tech {
-  font-size: 1.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.4rem;
   height: auto;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
@@ -664,6 +638,7 @@ p {
 }
 .buttonContainer {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 5vw;
 }
@@ -699,7 +674,7 @@ p {
 }
 
 #submit:hover {
-  background-color: #ff8a65;
+  background-color: #ff7e55;
 }
 
 @media screen and (min-width: 1000px) {
@@ -708,10 +683,10 @@ p {
   }
 }
 footer {
-  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 50px;
 }
 footer p {
   font-size: 1.4rem;
@@ -738,56 +713,6 @@ footer p {
   opacity: 0;
   width: 0;
   height: 0;
-}
-
-@media (max-width: 1000px) {
-  #switchContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-  }
-  .switch {
-    position: relative;
-    top: 7px;
-    right: 0;
-    left: 0;
-  }
-}
-.slider {
-  position: absolute;
-  cursor: pointer;
-  border-radius: 34px;
-  background-color: rgb(220, 220, 220);
-  transition: 0.3s;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  border-radius: 50%;
-  transition: 0.4s;
-  height: 18px;
-  width: 18px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  transform: translateX(20px);
 }
 
 /*# sourceMappingURL=style.css.map */
