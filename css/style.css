@@ -26,8 +26,7 @@ main, section {
   justify-content: space-between;
 }
 
-#services,
-#contact {
+#services {
   padding: 10px 50px 50px;
 }
 
@@ -88,8 +87,7 @@ main, section {
 @media screen and (min-width: 1000px) {
   #about,
   #services,
-  #portfolio,
-  #contact, main#intro {
+  #portfolio, main#intro {
     margin: 40px 0;
   }
 }
@@ -606,51 +604,6 @@ p {
   padding: 10px 30px;
 }
 
-#contact {
-  background-color: #F2F6F7;
-}
-#contact h2 {
-  margin-bottom: 50px;
-}
-#contact p {
-  margin-bottom: 30px;
-  text-align: center;
-}
-#contact form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: white;
-  height: 500px;
-  padding: 20px 30px;
-  border-radius: 15px;
-}
-#contact input {
-  padding: 0 15px;
-  height: 40px;
-  margin: 5px 0;
-  border: 1px solid #bdbdbd;
-  border-radius: 5px;
-}
-#contact input::placeholder {
-  color: #424242;
-}
-#contact textarea {
-  appearance: none;
-  margin: 20px 0;
-  resize: both;
-  padding: 10px;
-}
-#contact textarea::placeholder {
-  font-family: "Roboto", sans-serif;
-}
-
-@media screen and (min-width: 1000px) {
-  #contact form {
-    width: 50%;
-    margin: auto;
-  }
-}
 .buttonContainer {
   display: flex;
   justify-content: center;
@@ -702,6 +655,8 @@ footer {
   justify-content: center;
   align-items: center;
   height: 50px;
+  border-top: 1px solid lightgray;
+  width: 100%;
 }
 footer p {
   font-size: 1.4rem;

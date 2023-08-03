@@ -44,8 +44,7 @@ main, section {
   justify-content: space-between;
 }
 
-#services,
-#contact {
+#services {
   padding: 10px 50px 50px;
 }
 
@@ -113,8 +112,7 @@ main, section {
 @media screen and (min-width: 1000px) {
   #about,
   #services,
-  #portfolio,
-  #contact, main#intro {
+  #portfolio, main#intro {
     margin: 40px 0;
   }
 }
@@ -704,64 +702,6 @@ p {
 
 }
 
-#contact {
-  background-color: $global-bkg;
-
-  h2 {
-    margin-bottom: 50px;
-  }
-
-  p {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: white;
-    height: 500px;
-    padding: 20px 30px;
-    border-radius: 15px;
-  }
-
-  input {
-    padding: 0 15px;
-    height: 40px;
-    margin: 5px 0;
-    border: 1px solid $input-border;
-    border-radius: 5px;
-  }
-
-  input::placeholder {
-    color: $main-txt-color;
-  }
-
-  textarea {
-    appearance: none;
-    margin: 20px 0;
-    resize: both;
-    padding: 10px;
-  }
-
-  textarea::placeholder {
-    font-family: "Roboto", sans-serif;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-
-  #contact {
-    form {
-      width: 50%;
-      margin: auto;
-    }
-  }
-
-}
-
-
 .buttonContainer {
   @include flex-center;
   gap: 5vw;
@@ -811,7 +751,8 @@ p {
 footer {
   @include flex-center;
   height: 50px;
-
+  border-top: 1px solid lightgray;
+  width: 100%;
   p {
     font-size: 1.4rem;
   }
