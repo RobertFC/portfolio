@@ -78,6 +78,12 @@ main, section {
   }
 }
 
+@media screen and (max-width: 420px) {
+  .sectionContainer, #intro {
+    width: 300px;
+  }
+}
+
 .altBg {
   @include flex-center;
   background-color: $global-bkg;
@@ -211,21 +217,24 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  height: 40px;
   background-color: white;
   z-index: 20;
+  border-bottom: 1px solid $border-color;
+  display: flex;
+  justify-content: center;
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-
+  width: 1500px;
+  @include flex-center;
   padding: 10px;
-  border-bottom: 1px solid $border-color;
   position: relative;
   z-index: 1;
 
   .logoWrapper {
     @include flex-center;
+    position: absolute;
   }
 
   h2 {
@@ -234,7 +243,8 @@ nav {
   }
 
   .menu {
-    align-self: flex-end;
+    position: absolute;
+    right: 20px;
   }
 
   ul {
@@ -243,7 +253,7 @@ nav {
     position: absolute;
     bottom: -251px;
     left: 0;
-    font-size: 1.6rem;
+    font-size: 2rem;
     background-color: white;
     margin: 0;
     width: 100vw;
@@ -271,9 +281,11 @@ nav {
 }
 
 @media screen and (min-width: 1000px) {
+  header {
+    height: 80px;
+  }
   nav {
     justify-content: space-between;
-
     .hidden {
       transition: none;
       visibility: visible;
@@ -281,7 +293,7 @@ nav {
       flex-direction: row;
       position: static;
       width: 600px;
-      margin-left: auto;
+      margin: auto;
     }
 
     li {
@@ -289,11 +301,9 @@ nav {
     }
 
     li > a {
-      font-size: 1.2rem;
+      font-size: 1.8rem;
       font-weight: normal;
       color: $main-txt-color;
-
-
     }
   }
 
@@ -347,7 +357,7 @@ p {
 #intro {
   display: flex;
   flex-direction: column;
-  padding: 100px 10px 50px;
+  margin-top: 70px;
 
   .smallTitle {
     font-weight: bold;
@@ -395,9 +405,9 @@ p {
   z-index: -10;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (max-width: 420px) {
   .image img {
-    width: 60%;
+    width: 250px
   }
 }
 
@@ -426,7 +436,6 @@ p {
 }
 
 #about {
-
   h3 {
     font-size: 2rem;
     border-left: 2px solid $main-color;
@@ -447,7 +456,6 @@ p {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-
   }
 }
 
